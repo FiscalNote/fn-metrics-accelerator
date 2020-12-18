@@ -1,5 +1,7 @@
 %dw 2.0
-import * from dw::core::Binaries
+// import * from dw::core::Binaries output application/java --- (fromBase64((attributes.headers.Authorization default "") replace "Basic " with "") as String splitBy ":")[1]
 output application/java
 ---
-(fromBase64((attributes.headers.Authorization default "") replace "Basic " with "") as String splitBy ":")[1]
+if (!isEmpty(attributes.headers."X-ANYPNT-CLIENT-SECRET")) 
+  attributes.headers."X-ANYPNT-CLIENT-SECRET" 
+else attributes.headers."X-ANYPNT-PASSWORD"

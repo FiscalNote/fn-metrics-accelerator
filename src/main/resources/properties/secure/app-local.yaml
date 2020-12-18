@@ -1,0 +1,39 @@
+auth:
+  
+  orgId: "![IIn+jgacYq5RYhNwp19fqcDZaVLNGg+zfVx6Xk1Yudh7cjW20jKyMsWEADBGHA58]"
+  
+  # If auth mode = platform-credentials (ignored, otherwise):
+  username: "![5HGUREh3azsX3C6GrJf/Eu7wydcs33ucQ68epKruWN4=]"
+  password: "![6f8BJIjcjq3QOFwH8awOMTCpGSp+vXQ/UNhkrnD09Jg=]"
+  
+  # If auth mode = connected-app-credentials (ignored, otherwise):
+  clientId: "![2+2Q8HdArx3XKadnYR4K69gfJZW/C+xrM4HqTgReZTvKsNLhT9NciWcJXlAxusOD]"
+  clientSecret: "![XVnIc+5C1Y+1IOsGWkHUx74QA9nP0/7TCbP7mkr33wHcTRaNr23dK5Al6eXkPrwL]"
+     
+ignoreLists:
+  organizations: ""  #Array: comma-separated values 'orgId1,orgId2'
+
+splunk:
+  token: "![4NK9xSz9qVRsQBRCvgeFuRdEHzhqjwgAWm2dqepIVNg=]"
+  
+elk:
+  user: "user"
+  password: "password"
+
+# SDLC Metrics
+sdlc:
+  confluence:
+    user: "![TuwW1f9rNM320eU9J0Ki5w==]"
+    token: "![TuwW1f9rNM320eU9J0Ki5w==]"
+  bitbucket:
+    user: "![TuwW1f9rNM320eU9J0Ki5w==]"
+    token: "![TuwW1f9rNM320eU9J0Ki5w==]"
+  jira:
+    user: "![TuwW1f9rNM320eU9J0Ki5w==]"
+    token: "![TuwW1f9rNM320eU9J0Ki5w==]"
+  jenkins:
+    user: "![TuwW1f9rNM320eU9J0Ki5w==]"
+    token: "![TuwW1f9rNM320eU9J0Ki5w==]"
+  splunk:
+    user: "![TuwW1f9rNM320eU9J0Ki5w==]"
+    password: "![TuwW1f9rNM320eU9J0Ki5w==]"

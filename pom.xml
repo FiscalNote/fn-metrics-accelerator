@@ -3,11 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.mulesoft</groupId>
-	<artifactId>metrics-accelerator</artifactId>
-	<version>1.5.0</version>
+	<artifactId>fn-metrics-accelerator-api</artifactId>
+	<version>1.5.1</version>
 	<packaging>mule-application</packaging>
 
-	<name>metrics-accelerator</name>
+	<name>fn-metrics-accelerator-api</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -37,6 +37,26 @@
 				<extensions>true</extensions>
 				<configuration>
 					<classifier>mule-application</classifier>
+					<cloudHubDeployment>
+						<uri>https://anypoint.mulesoft.com</uri>
+						<muleVersion>${app.runtime}</muleVersion>
+						<applicationName>${cloudhub.applicationName}</applicationName>
+						<environment>${cloudhub.environment}</environment>
+						<workers>${cloudhub.workers}</workers>
+						<workerType>${cloudhub.workerType}</workerType>
+						<region>${cloudhub.region}</region>
+						<businessGroupId>${cloudhub.businessGroupId}</businessGroupId>
+						<connectedAppClientId>${cloudhub.connectedAppClientId}</connectedAppClientId>
+						<connectedAppClientSecret>${cloudhub.connectedAppClientSecret}</connectedAppClientSecret>
+						<connectedAppGrantType>client_credentials</connectedAppGrantType>
+						<properties>
+							<mule.key>${mule.key}</mule.key>
+							<mule.env>${mule.env}</mule.env>
+							<anypoint.platform.client_id>${cloudhub.environment.clientId}</anypoint.platform.client_id>
+							<anypoint.platform.client_secret>${cloudhub.environment.clientSecret}</anypoint.platform.client_secret>
+							<anypoint.platform.config.analytics.agent.enabled>${cloudhub.environment.analyticsAgentEnabled}</anypoint.platform.config.analytics.agent.enabled>
+						</properties>
+					</cloudHubDeployment>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -127,9 +147,9 @@
 
 	<repositories>
 		<repository>
-			<id>anypoint-exchange</id>
+			<id>anypoint-exchange-v2</id>
 			<name>Anypoint Exchange</name>
-			<url>https://maven.anypoint.mulesoft.com/api/v1/maven</url>
+			<url>https://maven.anypoint.mulesoft.com/api/v2/maven</url>
 			<layout>default</layout>
 		</repository>
 		<repository>
@@ -138,7 +158,20 @@
 			<url>https://repository.mulesoft.org/releases/</url>
 			<layout>default</layout>
 		</repository>
+		<repository>
+			<id>mule-exchange-core-repository</id>
+			<name>Exchange Core Repository</name>
+			<url>https://maven.anypoint.mulesoft.com/api/v2/organizations/55278f41-739f-4cde-8b2e-6aa3592eb7a5/maven</url>
+			<layout>default</layout>
+		</repository>
+		<repository>
+			<id>mule-exchange-api-team-repository</id>
+			<name>Exchange API Team Repository</name>
+			<url>https://maven.anypoint.mulesoft.com/api/v2/organizations/45e92f98-058f-4716-850d-bba6d068e4da/maven</url>
+			<layout>default</layout>
+		</repository>
 	</repositories>
+
 	<pluginRepositories>
 		<pluginRepository>
 			<id>mulesoft-releases</id>
