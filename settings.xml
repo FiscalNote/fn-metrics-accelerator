@@ -42,6 +42,12 @@
                     <url>https://maven.anypoint.mulesoft.com/api/v2/organizations/45e92f98-058f-4716-850d-bba6d068e4da/maven</url>
                     <layout>default</layout>
                 </repository>
+                <repository>
+                    <id>mulesoft-ee</id>
+                    <name>Mulesoft Enterprise Repository</name>
+                    <url>https://repository.mulesoft.org/nexus-ee/content/repositories/releases-ee/</url>
+                    <layout>default</layout>
+                </repository>
             </repositories>
             <pluginRepositories>
                 <pluginRepository>
