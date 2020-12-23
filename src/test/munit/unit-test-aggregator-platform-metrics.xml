@@ -9,7 +9,7 @@
 		http://www.mulesoft.org/schema/mule/munit-tools  http://www.mulesoft.org/schema/mule/munit-tools/current/mule-munit-tools.xsd
 http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
 	<munit:config name="aggregator-platform-metrics.xml" />
-	<munit:test name="get-platform-metrics-test" doc:id="10bb476e-e48f-417d-8c95-d699fdf8bbc2" description="Test">
+	<munit:test name="get-platform-metrics-test" doc:id="10bb476e-e48f-417d-8c95-d699fdf8bbc2" description="Test" ignore="true">
 		<munit:behavior>
 			<munit-tools:mock-when doc:name="Mock when POST login request" doc:id="c2183793-32d9-4c41-bab8-b1c3ce0b3dd7"
 				processor="http:request">
