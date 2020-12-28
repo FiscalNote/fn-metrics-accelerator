@@ -16,7 +16,7 @@ http://www.mulesoft.org/schema/mule/api-gateway http://www.mulesoft.org/schema/m
 	<configuration-properties doc:name="Configuration properties" doc:id="31f41c53-3b9c-4d8a-8385-b799a45797b8" file="properties/app-common.yaml" />
 
 	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="ef1c0e75-8dda-43df-a738-8d4ed076b92f">
-		<http:listener-connection host="0.0.0.0" port="${http.port}" />
+		<http:listener-connection host="${http.host}" port="${http.private.port}" />
 	</http:listener-config>
 
 	<ee:object-store-caching-strategy name="Caching_Strategy" doc:name="Caching Strategy" doc:id="b611514f-83b0-421a-84ae-34a1de9f18c7">
@@ -74,5 +74,6 @@ http://www.mulesoft.org/schema/mule/api-gateway http://www.mulesoft.org/schema/m
 			</http:authentication>
 		</http:request-connection>
 	</http:request-config>
-	<api-gateway:autodiscovery apiId="${api.id}" ignoreBasePath="true" doc:name="API Autodiscovery" doc:id="f2660113-b1b6-4b01-bc8b-3310db6960eb" flowRef="api-main" />
+	<api-gateway:autodiscovery apiId="${api.id}" doc:name="API Autodiscovery" doc:id="f2660113-b1b6-4b01-bc8b-3310db6960eb" flowRef="api-main" ignoreBasePath="true"/>
+	
 </mule>
