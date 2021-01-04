@@ -32,7 +32,7 @@ Table of Contents
       * [Final Notes](#final-notes)
 
 # Metrics Accelerator
-The **metrics accelerator** (**formerly metrics framework**) is a Mule application intended to collect, aggregate and load platform metrics into different visualization systems; providing out of the box integrations and visualization options, including useful dashboards and charts. In addition to the platform metrics, the accelerator also extends the capabilities to integrate with external applications like Jira, Confluence, Jenkins, Bitbucket and Splunk to gather SDLC metrics. This is an [UNLICENSED software, please review the considerations](UNLICENSE.md). If you need assistance for extending this, contact MuleSoft Professional Services
+The **metrics accelerator** (**formerly metrics framework**) is a Mule application intended to collect, aggregate and load platform metrics into different visualization systems; providing out of the box integrations and visualization options, including useful dashboards and charts. In addition to the platform metrics, the accelerator also extends the capabilities to integrate with external applications like Jira, Confluence, Jenkins, Bitbucket and Splunk to gather SDLC metrics. This is an [UNLICENSED software, please review the considerations](UNLICENSE.md).
 
 ## Features
 - Compact Mule application (1 single application)
@@ -459,6 +459,3 @@ How to link business needs, measurements and data sources?
 
 #### Detailed
 ![Implementation Approach](/img/implementation_approach.png)
-
-## Final Notes
-Enjoy and provide feedback / contribute :)
